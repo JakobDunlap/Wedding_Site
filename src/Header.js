@@ -1,6 +1,8 @@
+import './Header.css'
+
 const Header = () => {
     return (
-        <header classname="App-header">
+        <header className="App-header" id="App-header">
             <h1>
                 List element here
             </h1>
