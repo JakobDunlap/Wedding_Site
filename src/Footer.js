@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer>
-
+    <footer className="App-footer">
+        <p>alksdfalsdkjfsd aslddkfjasd laksjfe sflkasjefsief ejejfekfn</p>
     </footer>
   )
 }
