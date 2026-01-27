@@ -1,0 +1,10 @@
+{
+    "rsvps": [
+        {
+            "id" : 1,
+            "name" : "John Doe",
+            "attending" : true,
+            "plus-one" : true
+        }
+    ] 
+}
