@@ -1,14 +1,15 @@
 import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from 'react-router-dom';
-import './App.css';
 
-// legacy modules //
-//import Header from './Header';
-//import Content from './Content';
-//import Footer from './Footer';
+// css //
+import './App.css';
 
 // modules //
 import Home from './pages/Home';
 import Form from './pages/Form';
+import FormSubmitted from './pages/FormSubmitted';
+import Gallery from './pages/Gallery';
+import Venue from './pages/Venue';
+import NotFound from './pages/NotFound';
 
 // layouts //
 import RootLayout from './layouts/RootLayout';
@@ -18,6 +19,11 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path="form" element={<Form />} />
+      <Route path="form-submitted" element={<FormSubmitted />} />
+      <Route path="gallery" element={<Gallery />} />
+      <Route path="venue" element={<Venue />} />
+
+      <Route path="*" element={<NotFound/>} />
     </Route>
   )
 )

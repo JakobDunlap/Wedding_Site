@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.env
+old_backend_from_backenddev
+/data
+reportWebVitals.js
+server.js

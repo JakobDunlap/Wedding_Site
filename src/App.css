@@ -1,6 +1,22 @@
+
+/* deletes white border around everything */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary);
+}
+
+
+main {
+  margin: auto;
+  z-index: 1;
+  width: 75vw;
+}
+
 :root {
-  --primary: #074b39;
-  --secondary: #373737;
+  --primary: rgb(58, 67, 62);
+  --secondary: beige;
+  /* a nice blue: rgb(58, 67, 88) */
 }
 
 code {
@@ -34,36 +50,198 @@ code {
   }
 }
 
+/* Above lines are boilerplate from 'create react app' */
+
+/* fonts */
+.monsieur-la-doulaise-regular {
+  font-family: "Monsieur La Doulaise", serif;
+  font-weight: 400;
+  font-style: normal;
+  white-space: pre;
+}
+
+.monsieur-la-doulaise-regular a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+/* root layout */
+.root-layout {
+  /*background-image: url('boquetFrame.png');
+  background-repeat: no-repeat;*/
+  margin: 0px;
+}
+
+#container {
+  height: 80%;
+  width: 100%;
+  position: relative;
+  padding-top: 40vh;
+  padding-bottom: 10vh;
+}
+
+#title-banner {
+  color: var(--secondary);
+  z-index: 1;
+  position: relative;
+  font-size: 5vw;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  align-content: center;
+}
+
+#container p {
+  color: var(--secondary);
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: lighter;
+}
+
+/* flower frame */
+.flower-frame {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
 /* homepage */
 .home {
+  padding-top: 10px;
+  display:block;
+  margin: auto;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  color: var(--secondary);
+  z-index: 1;
+}
+
+.home p {
+  font-size: 14pt;
+  margin: 0px;
+}
+
+/* gallery */
+.gallery {
+  padding-top: 10px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+/* venue */
+.venue {
+  padding-top: 10px;
   display: flex;
   margin: auto;
   justify-content: center;
 }
 
 /* navbar */
-header nav {
-  display: flex;
-  gap: 16px;
-  justify-content: end;
+.navigation {
+  position: relative;
+  z-index: 1;
+  justify-content: center;
   max-width: 1200px;
+  min-width: 200px;
   margin: 0 auto;
+  display:flex;
 }
-header nav h1 {
-  margin-right: auto;
-  border-bottom: 3px solid darkgrey;
-}
+
 header nav a {
+  color: var(--secondary);
+  position:relative;
   text-decoration: none;
-  padding: 6px;
+  padding: 0px 4vw 0px 4vw;
   border-radius: 4px;
 }
+
+header nav a:hover {
+  background: rgb(78, 87, 82);
+}
+
 header nav a.active {
-  background: slategrey;
+  text-decoration: underline;
 }
 
 /* page content */
 main {
-  max-width: 1200px;
-  margin: 40px auto;
+  max-width: 2200px;
+}
+
+/* form */
+.form {
+  color: var(--secondary);
+  margin-top: 30px;
+  position: relative;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.form-header {
+  position: relative;
+  font-size: 1.5em;
+}
+
+form input, form label span, form textarea {
+  display: block;
+}
+
+form input, form textarea {
+  margin-bottom: 30px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 0;
+  width: 300px;
+  margin: 10px auto;
+  color: red;
+  background-color: azure;
+  justify-content: center;
+  justify-items: center;
+}
+
+form label span {
+  margin-bottom: 10px;
+}
+
+/* form submission landing page */
+
+/* button experiement */
+.button-wrap {
+  display: inline;
+  justify-content: center;
+}
+
+.yes-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#yes-button {
+  width: 1.5vw;
+  min-width: 15px;
+  max-width: 30px;
+  margin: 9px;
+}
+
+.no-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#no-button {
+  width: 1.5vw;
+  min-width: 15px;
+  max-width: 30px;
+  margin: 9px;
+}
+
+.button-label {
+  width: 5vw;
+  min-width: 10px;
 }
