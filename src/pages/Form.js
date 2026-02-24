@@ -28,7 +28,7 @@ export default function Form() {
             }
         }
         try {
-            const response = await fetch("http://localhost:3000/form", {
+            const response = await fetch("https://wedding-site-server-test.onrender.com/form", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
