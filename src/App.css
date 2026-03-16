@@ -177,6 +177,7 @@ main {
 .form {
   color: var(--secondary);
   margin-top: 30px;
+  margin-bottom: 30px;
   position: relative;
   justify-content: center;
   justify-items: center;
@@ -210,6 +211,9 @@ form label span {
 }
 
 /* form submission landing page */
+.form-submitted-para a {
+  color: rgb(245, 245, 220);
+}
 
 /* button experiement */
 .button-wrap {

@@ -5,7 +5,7 @@ export default function RootLayout() {
     <div className="root-layout">
       <div id="container">
         <img src={ require('../boquetFrame.png') } alt="flower wreath" draggable="false" className="flower-frame"/>
-        <h1 className="monsieur-la-doulaise-regular" id="title-banner"><NavLink to="/">Jake &   Julia</NavLink></h1>
+        <h1 className="monsieur-la-doulaise-regular" id="title-banner"><NavLink to="/">Julia &    Jake</NavLink></h1>
         <p>09 | 19 | 2026</p>
       </div>
         <header>

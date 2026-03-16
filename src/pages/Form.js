@@ -6,9 +6,12 @@ export default function Form() {
     // Used to navigate to "thank you" page
     const navigate = useNavigate();
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     // Handling logic for form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsSubmitting(true);
         const formData = new FormData(e.target);
         const payload = {
             guestFirst: formData.get("first-name"),
@@ -28,7 +31,7 @@ export default function Form() {
             }
         }
         try {
-            const response = await fetch("https://wedding-site-server-test.onrender.com/form", {
+            const response = await fetch("http://localhost:5000/form", { //replace localhost with "https://wedding-site-server-test.onrender.com/form" to talk to deployed test server
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -81,8 +84,8 @@ export default function Form() {
                     <input type ="email" name="email" autoComplete="email" required/>
                 </label>
                 <label>
-                    <span>Will you be bringing additional guests?</span>
-                    <p>If you plan on bringing a plus-one, a friend, or children with you, please add their names below so we have an accurate headcount for food and seating</p>
+                    <span className="additional-guests-info">If you plan on bringing a plug-one, a friend, or your children with you, please add their names below. Otherwise, simply leave this space blank.</span>
+                    <span className="additional-guests-info">If you plan on bringing more than four additional guests with you, please email Jake at 'jakob_dunlap@outlook.com'.</span>
                     {guests.map((_, index) => (
                         <div key={index}>
                             <span>Additional Guest First Name</span>
@@ -97,7 +100,9 @@ export default function Form() {
                         : "Add another guest"}
                     </button>
                 </label>
-                <button type="submit">Submit</button>
+                <button type="submit" disabled={isSubmitting} >
+                    {isSubmitting ? "Submitting..." : "Submit"}
+                </button>
             </form>
         </div>
     )
