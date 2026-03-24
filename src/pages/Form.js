@@ -18,7 +18,8 @@ export default function Form() {
             guestLast: formData.get("last-name"),
             attending: formData.get("attending") === "true",
             email: formData.get("email"),
-            additionalGuests: []
+            additionalGuests: [],
+            dietaryRestriction: formData.get("dietary")
         };
         const guestFirst = formData.getAll("guestFirst[]");
         const guestLast = formData.getAll("guestLast[]");
@@ -58,6 +59,11 @@ export default function Form() {
         }
     };
 
+    // Trying to reactively disable rest of form if "not attending" radio button pushed
+    const notAttending = () => {
+        
+    }
+
     return (
         <div className="form">
             <p className="form-header">Please fill out the form below to let us know if you'll be joining us</p>
@@ -84,8 +90,8 @@ export default function Form() {
                     <input type ="email" name="email" autoComplete="email" required/>
                 </label>
                 <label>
-                    <span className="additional-guests-info">If you plan on bringing a plug-one, a friend, or your children with you, please add their names below. Otherwise, simply leave this space blank.</span>
-                    <span className="additional-guests-info">If you plan on bringing more than four additional guests with you, please email Jake at 'jakob_dunlap@outlook.com'.</span>
+                    <span className="additional-form-info">If you plan on bringing a plug-one, a friend, or your children with you, please add their names below. Otherwise, simply leave this space blank.</span>
+                    <span className="additional-form-info">If you plan on bringing more than four additional guests with you, please email Jake at 'jakob_dunlap@outlook.com'.</span>
                     {guests.map((_, index) => (
                         <div key={index}>
                             <span>Additional Guest First Name</span>
@@ -99,6 +105,10 @@ export default function Form() {
                         ? "Maximum number of guests reached for this form"
                         : "Add another guest"}
                     </button>
+                </label>
+                <label>
+                    <span className="additional-form-info">If you or any of the additional guests you will be bringing have any dietary restrictions, please note them below.</span>
+                    <input type="text" name="dietary"/>
                 </label>
                 <button type="submit" disabled={isSubmitting} >
                     {isSubmitting ? "Submitting..." : "Submit"}

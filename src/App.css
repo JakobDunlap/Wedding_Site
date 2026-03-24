@@ -14,8 +14,8 @@ main {
 }
 
 :root {
-  --primary: rgb(58, 67, 62);
-  --secondary: beige;
+  --primary: beige;
+  --secondary: black;
   /* a nice blue: rgb(58, 67, 88) */
 }
 
@@ -161,7 +161,7 @@ header nav a {
 }
 
 header nav a:hover {
-  background: rgb(78, 87, 82);
+  background: rgb(146, 148, 105);
 }
 
 header nav a.active {
@@ -197,10 +197,10 @@ form input, form textarea {
   margin-bottom: 30px;
   padding: 8px;
   border-radius: 4px;
-  border: 0;
+  border: 3px solid rgb(208, 205, 154);
   width: 300px;
   margin: 10px auto;
-  color: red;
+  color: var(--secondary);
   background-color: azure;
   justify-content: center;
   justify-items: center;
@@ -210,20 +210,27 @@ form label span {
   margin-bottom: 10px;
 }
 
+.additional-form-info {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 /* form submission landing page */
 .form-submitted-para a {
-  color: rgb(245, 245, 220);
+  color: rgb(146, 148, 105);
 }
 
 /* button experiement */
 .button-wrap {
-  display: inline;
+  display: flex;
   justify-content: center;
 }
 
 .yes-button-wrapper {
   display: flex;
   justify-content: center;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
 }
 
 #yes-button {
@@ -236,6 +243,8 @@ form label span {
 .no-button-wrapper {
   display: flex;
   justify-content: center;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
 }
 
 #no-button {
@@ -248,4 +257,21 @@ form label span {
 .button-label {
   width: 5vw;
   min-width: 10px;
+}
+
+
+/* MEDIUM VIEW WIDTH */
+@media (max-width: 870px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+}
+}
+
+/* MOBILE VIEW WIDTH */
+@media (max-width: 600px) {
+  body {
+    background-color: green;
+  }
 }
