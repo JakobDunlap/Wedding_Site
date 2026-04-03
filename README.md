@@ -14,4 +14,3 @@ NOTES AND NEEDED FIXES
 # ADD: "Remove" button for additional guest field
 # ADD: Form data verification
 # ADD: An explainer paragraph for the 'Additional Guests' field... Something like "If you are bringing a plus one or children..."
-# ADD: "Loading wheel" animation when the "Subit" button has been pressed on the RSVP form.

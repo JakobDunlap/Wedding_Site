@@ -14,25 +14,22 @@ export default function Form() {
         setIsSubmitting(true);
         const formData = new FormData(e.target);
         const payload = {
-            guestFirst: formData.get("first-name"),
-            guestLast: formData.get("last-name"),
+            guestName: formData.get("guest-name"),
             attending: formData.get("attending") === "true",
             email: formData.get("email"),
             additionalGuests: [],
             dietaryRestriction: formData.get("dietary")
         };
-        const guestFirst = formData.getAll("guestFirst[]");
-        const guestLast = formData.getAll("guestLast[]");
-        for (let i = 0; i < guestFirst.length; i++) {
-            if (guestFirst[i] || guestLast[i]) {
+        const additionalGuestName = formData.getAll("additionalGuestName[]");
+        for (let i = 0; i < additionalGuestName.length; i++) {
+            if (additionalGuestName[i]) {
                 payload.additionalGuests.push({
-                    first: guestFirst[i],
-                    last: guestLast[i]
+                    additionalGuestName: additionalGuestName[i]
                 });
             }
         }
         try {
-            const response = await fetch("http://localhost:5000/form", { //replace localhost with "https://wedding-site-server-test.onrender.com/form" to talk to deployed test server
+            const response = await fetch("https://wedding-site-server-test.onrender.com/form", { //replace localhost with "http://localhost:5000/form" to talk to deployed test server
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -69,10 +66,8 @@ export default function Form() {
             <p className="form-header">Please fill out the form below to let us know if you'll be joining us</p>
             <form action="/form" method="post" onSubmit={handleSubmit}>
                 <label>
-                    <span>First Name</span>
-                    <input type="text" name="first-name" autoComplete="given-name" required />
-                    <span>Last Name</span>
-                    <input type="text" name="last-name" autoComplete="family-name" required />
+                    <span>Your Full Name</span>
+                    <input type="text" name="guest-name" autoComplete="full-name" required />
                 </label>
                 <label>
                     <span>Will you be attending?</span>
@@ -94,10 +89,8 @@ export default function Form() {
                     <span className="additional-form-info">If you plan on bringing more than four additional guests with you, please email Jake at 'jakob_dunlap@outlook.com'.</span>
                     {guests.map((_, index) => (
                         <div key={index}>
-                            <span>Additional Guest First Name</span>
-                            <input name="guestFirst[]" type="name"/>
-                            <span>Additional Guest Last Name</span>
-                            <input name="guestLast[]" type="name"/>
+                            <span>Additional Guest Full Name</span>
+                            <input name="additionalGuestName[]" type="name"/>
                         </div>
                     ))}
                     <button type="button" onClick={addGuest} disabled={guests.length >= maxGuests}>
