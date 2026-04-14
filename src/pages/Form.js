@@ -40,9 +40,15 @@ export default function Form() {
             console.log("Server response:", result);
         } catch (err) {
             console.error("Error submitting form:", err);
+            
         }
         console.log(payload);
-        navigate("/form-submitted");
+        if (e) {
+            navigate("/form-submission-error");
+        } else {
+            navigate("/form-submitted");
+        }
+        
     }
 
     // Variables for adding additional guests
@@ -67,7 +73,7 @@ export default function Form() {
             <form action="/form" method="post" onSubmit={handleSubmit}>
                 <label>
                     <span>Your Full Name</span>
-                    <input type="text" name="guest-name" autoComplete="full-name" required />
+                    <input type="text" name="guest-name" autoComplete="name" required />
                 </label>
                 <label>
                     <span>Will you be attending?</span>

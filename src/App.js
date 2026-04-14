@@ -7,6 +7,7 @@ import './App.css';
 import Home from './pages/Home';
 import Form from './pages/Form';
 import FormSubmitted from './pages/FormSubmitted';
+import FormSubmissionError from './pages/FormSubmissionError';
 import Gallery from './pages/Gallery';
 import Venue from './pages/Venue';
 import NotFound from './pages/NotFound';
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="form" element={<Form />} />
       <Route path="form-submitted" element={<FormSubmitted />} />
+      <Route path="form-submission-error" element={<FormSubmissionError />} />
       <Route path="gallery" element={<Gallery />} />
       <Route path="venue" element={<Venue />} />
 

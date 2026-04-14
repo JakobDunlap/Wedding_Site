@@ -15,7 +15,7 @@ main {
 
 :root {
   --primary: beige;
-  --secondary: black;
+  --secondary: white;
   /* a nice blue: rgb(58, 67, 88) */
 }
 
@@ -76,8 +76,12 @@ code {
   height: 80%;
   width: 100%;
   position: relative;
-  padding-top: 40vh;
+  padding-top: 10vh;
   padding-bottom: 10vh;
+}
+
+#container img {
+  z-index: -1;
 }
 
 #title-banner {
@@ -152,11 +156,18 @@ code {
   display:flex;
 }
 
+header {
+  background-color: tan;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
 header nav a {
   color: var(--secondary);
+  font-size: 14pt;
   position:relative;
   text-decoration: none;
-  padding: 0px 4vw 0px 4vw;
+  padding: 4px 4vw 4px 4vw;
   border-radius: 4px;
 }
 
@@ -200,7 +211,7 @@ form input, form textarea {
   border: 3px solid rgb(208, 205, 154);
   width: 300px;
   margin: 10px auto;
-  color: var(--secondary);
+  color: black;
   background-color: azure;
   justify-content: center;
   justify-items: center;
