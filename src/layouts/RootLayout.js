@@ -13,24 +13,39 @@ let imageName = 'test';
 
   return (
     <div className="root-layout">
+      
       <header>
-            <nav className="navigation">
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="form">RSVP</NavLink>
-                <NavLink to="gallery">Gallery</NavLink>
-                <NavLink to="venue">Venue</NavLink>
-            </nav>
-        </header>
+        <input id="toggle" type="checkbox"></input>
+        <label htmlFor="toggle" class="hamburger">
+          <div className="top-slice"></div>
+          <div className="middle-slice"></div>
+          <div className="bottom-slice"></div>
+        </label>
+        <nav className="navigation">
+          <div className="navigation-link">
+            <NavLink to="/">Home</NavLink>
+          </div>
+          <div className="navigation-link">
+            <NavLink to="form">RSVP</NavLink>
+          </div>
+          <div className="navigation-link">
+            <NavLink to="gallery">Gallery</NavLink>
+          </div>
+          <div className="navigation-link">
+            <NavLink to="venue">Venue</NavLink>
+          </div>
+        </nav>
+      </header>
       <div id="container">
         <img src={ require(`../${imageName}.jpg`) } alt="flower wreath" draggable="false" className="flower-frame"/>
         <h1 className="monsieur-la-doulaise-regular" id="title-banner"><NavLink to="/">Julia &    Jake</NavLink></h1>
         <p>09 | 19 | 2026</p>
       </div>
-        
 
-        <main>
-            <Outlet />
-        </main>
+      <main>
+          <Outlet />
+      </main>
+
     </div>
   )
 }
