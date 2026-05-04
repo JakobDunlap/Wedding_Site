@@ -14,3 +14,11 @@ NOTES AND NEEDED FIXES
 # ADD: "Remove" button for additional guest field
 # ADD: Form data verification
 # ADD: An explainer paragraph for the 'Additional Guests' field... Something like "If you are bringing a plus one or children..."
+# ADD: FAQ (mention no registry)
+# CHANGE: Venue page to 'Wedding Details'
+# ADD: Things to do page
+# CHANGE: Try to make the footer "sticky" to the bottom of the page
+# CHANGE: Change #container height to always be the same on every page, maybe change vh to %
+
+PRE-FLIGHT NEEDED FIXES
+# ADD: My personal number and email on FormSubmissionError.js 

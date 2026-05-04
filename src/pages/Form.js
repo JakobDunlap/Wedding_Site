@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 
 export default function Form() {
 
@@ -65,13 +65,20 @@ export default function Form() {
 
     return (
         <div className="form">
-            <p className="form-header">Please fill out the form below to let us know if you'll be joining us</p>
+
+            <div id="container">
+                <img src={ require(`../form.jpg`) } alt="background" draggable="false" className="background-image"/>
+                <h1 className="monsieur-la-doulaise-regular" id="title-banner"><NavLink to="/">Julia &    Jake</NavLink></h1>
+                <p>09 | 19 | 2026</p>
+            </div>
+
             <form action="/form" method="post" onSubmit={handleSubmit}>
-                <label>
+                <p className="form-header">Please fill out the form below to let us know if you'll be joining us</p>
+                <label className="form-input-cell">
                     <span>Your Full Name</span>
                     <input type="text" name="guest-name" autoComplete="name" required />
                 </label>
-                <label>
+                <label className="form-input-cell">
                     <span>Will you be attending?</span>
                     <div className="button-wrap">
                         <div className="yes-button-wrapper">
@@ -82,7 +89,7 @@ export default function Form() {
                         </div>
                     </div>
                 </label>
-                <label>
+                <label className="form-input-cell">
                     <span>Your Email</span>
                     <input type ="email" name="email" autoComplete="email" required/>
                 </label>
@@ -90,7 +97,7 @@ export default function Form() {
                     <span className="additional-form-info">If you plan on bringing a plug-one, a friend, or your children with you, please add their names below. Otherwise, simply leave this space blank.</span>
                     <span className="additional-form-info">If you plan on bringing more than four additional guests with you, please email Jake at 'jakob_dunlap@outlook.com'.</span>
                     {guests.map((_, index) => (
-                        <div key={index}>
+                        <div key={index} className="form-input-cell">
                             <span>Additional Guest Full Name</span>
                             <input name="additionalGuestName[]" type="name"/>
                         </div>
@@ -101,7 +108,7 @@ export default function Form() {
                         : "Add another guest"}
                     </button>
                 </label>
-                <label>
+                <label className="form-input-cell">
                     <span className="additional-form-info">If you or any of the additional guests you will be bringing have any dietary restrictions, please note them below.</span>
                     <input type="text" name="dietary"/>
                 </label>
@@ -109,6 +116,7 @@ export default function Form() {
                     {isSubmitting ? "Submitting..." : "Submit"}
                 </button>
             </form>
+
         </div>
     )
 }

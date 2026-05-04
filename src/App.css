@@ -1,8 +1,8 @@
 /* deletes white border around everything */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--primary);
+  margin: 0;
+  padding: 0;
+  background-color: white;
 }
 
 /* hides the "checkbox" that is used for hamburger nav button in mobile view */
@@ -11,24 +11,97 @@ body {
   display: none;
 }
 
-main {
-  margin: auto;
-  z-index: 1;
-  width: 75vw;
-}
-
 :root {
-  --primary: beige;
+  --primary: tan;
   --secondary: white;
   /* a nice blue: rgb(58, 67, 88) */
 }
 
-code {
+main {
+  margin: auto;
+  z-index: 1;
+  width: 100%;
+  max-width: 2200px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: black;
+  background-color: var(--primary);
+  padding: 1.5vh;
+}
+
+footer p {
+  margin: 0;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+}
+
+/*////////////////////////////Navbar////////////////////////////*/
+.navigation {
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+  max-width: 1200px;
+  min-width: 200px;
+  margin: 0 auto;
+  display:flex;
+}
+
+
+/*////////////////////////////Header////////////////////////////*/
+header {
+  background-color: var(--primary);
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+header nav a {
+  color: var(--secondary);
+  font-size: 14pt;
+  position:relative;
+  text-decoration: none;
+  padding: 4px 4vw 4px 4vw;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  border-bottom: 3px solid transparent;
+}
+
+/* Navbar animations */
+header nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: yellow;
+  opacity: 0;
+  transition: opacity 0.3s, transform .3s;
+}
+
+header nav a:hover::after,
+header nav a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 3px, 0);
+}
+
+header nav a.active::after {
+  width: 100%;
+}
+
+header nav a.active {
+  border-bottom: 3px solid yellow;
+}
+
+
+
+/* Below lines are boilerplate from 'create react app' */
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/* Above lines are originally from 'index.css' */
 
 .App-logo {
   height: 40vmin;
@@ -52,8 +125,7 @@ code {
   to {
     transform: rotate(360deg);
   }
-}
-
+} */
 /* Above lines are boilerplate from 'create react app' */
 
 /* fonts */
@@ -71,17 +143,23 @@ code {
 
 /* root layout */
 .root-layout {
-  /*background-image: url('boquetFrame.png');
-  background-repeat: no-repeat;*/
   margin: 0px;
 }
 
 #container {
-  height: 80%;
+  height: 100%;
   width: 100%;
   position: relative;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  padding-top: 30vh;
+  padding-bottom: 30vh;
+  overflow: hidden;
+}
+
+#container p {
+  color: var(--secondary);
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: lighter;
 }
 
 #container img {
@@ -99,15 +177,8 @@ code {
   align-content: center;
 }
 
-#container p {
-  color: var(--secondary);
-  font-size: 1.5em;
-  text-align: center;
-  font-weight: lighter;
-}
-
-/* flower frame */
-.flower-frame {
+/* background image */
+.background-image {
   position: absolute;
   width: 100%;
   left: 0;
@@ -116,15 +187,16 @@ code {
   pointer-events: none;
 }
 
-/* homepage */
+/*////////////////////////////Homepage////////////////////////////*/
 .home {
-  padding-top: 10px;
+  padding-top: 0;
   display:block;
   margin: auto;
+  width: 100%;
   justify-content: center;
   justify-items: center;
   text-align: center;
-  color: var(--secondary);
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -133,75 +205,31 @@ code {
   margin: 0px;
 }
 
-/* gallery */
-.gallery {
-  padding-top: 10px;
-  display: flex;
-  margin: auto;
-  justify-content: center;
-}
-
-/* venue */
-.venue {
-  padding-top: 10px;
-  display: flex;
-  margin: auto;
-  justify-content: center;
-}
-
-/* navbar */
-.navigation {
-  position: relative;
-  z-index: 1;
-  justify-content: center;
-  max-width: 1200px;
-  min-width: 200px;
-  margin: 0 auto;
-  display:flex;
-}
-
-header {
-  background-color: tan;
-  padding-top: 3vh;
-  padding-bottom: 3vh;
-}
-
-header nav a {
-  color: var(--secondary);
-  font-size: 14pt;
-  position:relative;
-  text-decoration: none;
-  padding: 4px 4vw 4px 4vw;
-  border-radius: 4px;
-}
-
-header nav a:hover {
-  background: rgb(146, 148, 105);
-}
-
-header nav a.active {
-  text-decoration: underline;
-}
-
-/* page content */
-main {
-  max-width: 2200px;
-}
-
-/* form */
+/*////////////////////////////Form////////////////////////////*/
 .form {
-  color: var(--secondary);
-  margin-top: 30px;
-  margin-bottom: 30px;
+  color: black;
+  margin-top: 0;
+  padding-bottom: 2vh;
   position: relative;
   justify-content: center;
   justify-items: center;
   text-align: center;
+  overflow: hidden;
 }
 
 .form-header {
+  padding-top: 1.5vh;
   position: relative;
   font-size: 1.5em;
+}
+
+form {
+  margin-top: 2vh;
+  padding-bottom: 1.5vh;
+  width: 75vw;
+  background-color: rgba(254, 239, 191, 0.8);
+  color: black;
+  border-radius: 7px;
 }
 
 form input, form label span, form textarea {
@@ -225,6 +253,11 @@ form label span {
   margin-bottom: 10px;
 }
 
+.form-input-cell {
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh
+}
+
 .additional-form-info {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -233,6 +266,92 @@ form label span {
 /* form submission landing page */
 .form-submitted-para a {
   color: rgb(146, 148, 105);
+}
+
+/*////////////////////////////Gallery////////////////////////////*/
+.gallery {
+  padding-top: 0;
+  padding-bottom: 2vh;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/*////////////////////////////Venue////////////////////////////*/
+.venue {
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 2vh;
+  display: block;
+  margin: auto;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: var(--secondary);
+  z-index: 1;
+}
+
+/*////////////////////////////Form Submitted////////////////////////////*/
+.form-submitted {
+padding-top: 0;
+  display:block;
+  margin: auto;
+  padding-bottom: 2vh;
+  width: 100%;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: var(--secondary);
+  z-index: 1;
+}
+
+.form-submitted p {
+  font-size: 14pt;
+  margin: 0px;
+}
+
+/*////////////////////////////Form Submission Error////////////////////////////*/
+.form-submission-error {
+padding-top: 0;
+  display:block;
+  margin: auto;
+  padding-bottom: 2vh;
+  width: 100%;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: var(--secondary);
+  z-index: 1;
+}
+
+.form-submission-error p {
+  font-size: 14pt;
+  margin: 0px;
+}
+
+/*////////////////////////////Page Content////////////////////////////*/
+.page-content {
+  width: 75vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  background-color: rgba(254, 239, 191, 0.8);
+  color: black;
+  border-radius: 7px;
+}
+
+.page-content h1 {
+  padding-bottom: 1.5vh;
+  padding-top: 1.5vh;
+  margin: 0;
+}
+
+.page-content p {
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
 }
 
 /* button experiement */
@@ -287,12 +406,97 @@ form label span {
 /* MOBILE VIEW WIDTH */
 @media (max-width: 600px) {
   body {
-    background-color: green;
+    background-color: rgb(252, 248, 241);
+  }
+
+  main {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  main p {
+    color: black;
+  }
+
+  main h1 {
+    color: black;
+  }
+
+  .home {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+  }  
+
+  .form {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+  }  
+
+  .form-header {
+    padding-top: 0;
+    margin-top: 1.5vh;
+    position: relative;
+    font-size: 1.5em;
+  }
+
+  form {
+    width: 94vw;
+    background-color: rgb(252, 248, 241); /*Keep this same as 'body' above*/
+    width: 94vw;
+    padding-top: 1.5vh;
+    margin: 0;
+  }
+
+  .venue {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+  }  
+
+  .form-submission-error {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+  }  
+
+  .form-submitted {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+  }  
+
+  /* Top-of-page image and header text */
+  #container {
+    overflow: hidden;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+
+  /*////////////////////////////Page Content////////////////////////////*/
+  .page-content {
+    background-color: rgb(252, 248, 241); /*Keep this same as 'body' above*/
+    width: 94vw;
+    padding-top: 1.5vh;
+    margin: 0;
+  }
+
+  .page-content h1 {
+    padding-top: 0; /*Consider changing top and bottom padding for h1 and p. They are inherited from desktop view*/
+    padding-bottom: 1.5vh;
+    margin: 0;
   }
 
   .hamburger {
     position: absolute;
-    top: 5em;
+    top: 8.3vh;
     left: 7.5vw;
     margin-left: -3vw;
     margin-top: -7.5vh;
@@ -315,11 +519,26 @@ form label span {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: grey;
+    background-color: white;
     top: 100%; left: 0; right: 0; bottom: 0;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     transform: scale(0);
+  }
+
+  .navigation-link {
+    height: 9vh;
+    margin-top: 5vh;
+    z-index: 10;
+  }
+
+  .navigation-link a {
+    height: 6vh; /* keep these two the same in order to keep the text centered within the nav button */
+    line-height: 6vh;
+  }
+
+  .clickable {
+    z-index: 99;
   }
 
   header {
@@ -334,8 +553,10 @@ form label span {
   nav a {
     position: relative;
     text-decoration: none;
+    width: 40vw;
     color: var(--primary);
     background-color: rgb(146, 148, 105);
+    border-radius: 4px;
     font-size: 2em;
     display: inline-block;
     margin-top: 1.25em;
@@ -352,6 +573,10 @@ form label span {
     left: -0.5em;
     transition: all 0.2s ease-in-out;
   }
+
+  header nav a.active {
+  border-bottom: none;
+}
 
   /* animations */
   #toggle:checked + .hamburger .top-slice {
