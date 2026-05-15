@@ -1,21 +1,21 @@
-import { NavLink, Outlet } from "react-router-dom"
-import { useLocation } from "react-router-dom"
-
-
+import { NavLink, Outlet, useNavigate } from "react-router-dom"
 
 export default function RootLayout() {
 
-  const location = useLocation();
+  const navigate = useNavigate();
+
+  // const location = useLocation();
 
   // For switching background images for different pages
-  let imageName = 'test';
-  if (location.pathname === '/form') {
-    imageName = 'form';
-  }
+  // let imageName = 'test';
+  // if (location.pathname === '/form') {
+  //   imageName = 'form';
+  // }
 
   // This function automatically closes the hamburger nav menu when a link is clicked (in mobile layout)
   function navClick() {
     document.getElementById('toggle').checked = false;
+    window.scrollTo(0, 0);
   }
 
   return (

@@ -6,6 +6,11 @@ export default function Form() {
     // Used to navigate to "thank you" page
     const navigate = useNavigate();
 
+    function navClick() {
+        window.scrollTo(0, 0);
+    }
+
+    // For graying out Submission button after click
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Handling logic for form submission
@@ -29,7 +34,7 @@ export default function Form() {
             }
         }
         try {
-            const response = await fetch("https://wedding-site-server-test.onrender.com/form", { //replace localhost with "http://localhost:5000/form" to talk to local server in development
+            const response = await fetch("https://jake-and-julia-wedding-server.onrender.com/form", { //Local Development Server:"http://localhost:5000/form" Live App Server:"https://wedding-site-server-test.onrender.com/form" New Server: "https://jake-and-julia-wedding-server.onrender.com/form"
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -41,10 +46,12 @@ export default function Form() {
         } catch (err) {
             console.error("Error submitting form:", err);
             navigate("/form-submission-error");
+            window.scrollTo(0, 0);
             return;
         }
         console.log(payload);
-        navigate("/form-submitted");        
+        navigate("/form-submitted");  
+        window.scrollTo(0, 0);      
     }
 
     // Variables for adding additional guests
@@ -68,7 +75,7 @@ export default function Form() {
 
             <div id="container">
                 <img src={ require(`../form.jpg`) } alt="background" draggable="false" className="background-image"/>
-                <h1 className="monsieur-la-doulaise-regular" id="title-banner"><NavLink to="/">Julia &    Jake</NavLink></h1>
+                <h1 className="monsieur-la-doulaise-regular" id="title-banner"><NavLink to="/" onClick={navClick}>Julia &    Jake</NavLink></h1>
                 <p>09 | 19 | 2026</p>
             </div>
 

@@ -3,12 +3,17 @@ import { NavLink } from 'react-router-dom';
 //const email = process.env.EMAIL; Try to find some way to add personal phone and email as a secret env variable in Render so it does not have to be uploaded to GitHub
 
 export default function FormSubmissionError() {
+
+    function navClick() {
+        window.scrollTo(0, 0);
+    }
+
     return (
         <div className="form-submission-error">
 
             <div id="container">
                 <img src={ require(`../form-submission-error.jpg`) } alt="background" draggable="false" className="background-image"/>
-                <h1 className="monsieur-la-doulaise-regular" id="title-banner"><NavLink to="/">Julia &    Jake</NavLink></h1>
+                <h1 className="monsieur-la-doulaise-regular" id="title-banner"><NavLink to="/" onClick={navClick}>Julia &    Jake</NavLink></h1>
                 <p>09 | 19 | 2026</p>
             </div>
 
