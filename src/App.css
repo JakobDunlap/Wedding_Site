@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: var(--secondary);
 }
 
 /* hides the "checkbox" that is used for hamburger nav button in mobile view */
@@ -12,9 +12,12 @@ body {
 }
 
 :root {
-  --primary: tan;
-  --secondary: white;
-  /* a nice blue: rgb(58, 67, 88) */
+  --primary: rgb(222, 190, 149); /* Tanish */
+  --secondary: rgb(231, 225, 199); /* Semi-cream */
+  --soft-blue: rgb(58, 67, 88);
+  --sage-green: rgb(101, 117, 101);
+  --julia-blue: rgb(105, 154, 194);
+  --julia-yellow: rgb(255, 255, 77);
 }
 
 main {
@@ -22,13 +25,14 @@ main {
   z-index: 1;
   width: 100%;
   max-width: 2200px;
+  min-height: 96vh;
 }
 
 footer {
   display: flex;
   justify-content: center;
-  color: black;
-  background-color: var(--primary);
+  color: var(--secondary);
+  background-color: var(--sage-green);
   padding: 1.5vh;
 }
 
@@ -43,16 +47,18 @@ footer p {
   position: relative;
   z-index: 1;
   justify-content: center;
-  max-width: 1200px;
   min-width: 200px;
   margin: 0 auto;
   display:flex;
 }
 
+.navigation-link a{
+  font-size: 16pt;
+}
 
 /*////////////////////////////Header////////////////////////////*/
 header {
-  background-color: var(--primary);
+  background-color: var(--sage-green);
   padding-top: 3vh;
   padding-bottom: 3vh;
 }
@@ -76,7 +82,7 @@ header nav a::after {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: yellow;
+  background-color: var(--secondary);
   opacity: 0;
   transition: opacity 0.3s, transform .3s;
 }
@@ -92,7 +98,7 @@ header nav a.active::after {
 }
 
 header nav a.active {
-  border-bottom: 3px solid yellow;
+  border-bottom: 3px solid var(--secondary);
 }
 
 
@@ -139,6 +145,29 @@ header nav a.active {
 .monsieur-la-doulaise-regular a {
   text-decoration: none;
   color: var(--secondary);
+}
+
+.sacramento-regular {
+  font-family: "Sacramento", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sacramento-regular a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+.josifin-slab {
+  font-family: "Josefin Slab", serif;
+  font-weight: 400;
+  font-size: normal;
+}
+
+.josifin-slab-bold {
+  font-family: "Josefin Slab", serif;
+  font-weight:bold;
+  font-size: 20pt;
 }
 
 /* root layout */
@@ -227,7 +256,8 @@ form {
   margin-top: 2vh;
   padding-bottom: 1.5vh;
   width: 75vw;
-  background-color: rgba(254, 239, 191, 0.8);
+  font-size: 14pt;
+  background-color: var(--secondary);
   color: black;
   border-radius: 7px;
 }
@@ -240,17 +270,22 @@ form input, form textarea {
   margin-bottom: 30px;
   padding: 8px;
   border-radius: 4px;
-  border: 3px solid rgb(208, 205, 154);
+  border: 3px solid rgb(208, 205, 154); /* Line around the from input areas */
   width: 300px;
   margin: 10px auto;
   color: black;
-  background-color: azure;
+  background-color: azure; /* Input areas for text */
+  font-size: 14pt;
   justify-content: center;
   justify-items: center;
 }
 
 form label span {
   margin-bottom: 10px;
+}
+
+form button {
+  font-size: 12pt;
 }
 
 .form-input-cell {
@@ -263,7 +298,7 @@ form label span {
   margin-bottom: 10px;
 }
 
-/* form submission landing page */
+/* For "return to home page" link - on /form-submitted and /form-submission-error */
 .form-submitted-para a {
   color: rgb(146, 148, 105);
 }
@@ -278,6 +313,11 @@ form label span {
   overflow: hidden;
 }
 
+.gallery p {
+  font-size: 14pt;
+  margin: 0px;
+}
+
 /*////////////////////////////Venue////////////////////////////*/
 .venue {
   padding-top: 0;
@@ -289,8 +329,36 @@ form label span {
   justify-items: center;
   text-align: center;
   overflow: hidden;
-  color: var(--secondary);
   z-index: 1;
+}
+
+.venue p {
+  font-size: 14pt;
+  margin: 0px;
+}
+
+/*////////////////////////////FAQ////////////////////////////*/
+.faq {
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 2vh;
+  display: block;
+  margin: auto;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.faq p {
+  font-size: 14pt;
+  margin: 0px;
+}
+
+.faq-question {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 /*////////////////////////////Form Submitted////////////////////////////*/
@@ -304,7 +372,6 @@ padding-top: 0;
   justify-items: center;
   text-align: center;
   overflow: hidden;
-  color: var(--secondary);
   z-index: 1;
 }
 
@@ -324,7 +391,6 @@ padding-top: 0;
   justify-items: center;
   text-align: center;
   overflow: hidden;
-  color: var(--secondary);
   z-index: 1;
 }
 
@@ -338,15 +404,18 @@ padding-top: 0;
   width: 75vw;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  background-color: rgba(254, 239, 191, 0.8);
+  background-color: rgb(212, 201, 174);
   color: black;
   border-radius: 7px;
 }
 
 .page-content h1 {
-  padding-bottom: 1.5vh;
-  padding-top: 1.5vh;
+  padding-bottom: 2.5vh;
+  padding-top: 2.5vh;
   margin: 0;
+  margin-bottom: 5vh;
+  border-bottom: 4px solid rgb(188, 177, 155);
+  color: rgb(48, 68, 48);
 }
 
 .page-content p {
@@ -405,14 +474,18 @@ padding-top: 0;
 
 /* MOBILE VIEW WIDTH */
 @media (max-width: 600px) {
+  html {
+    scrollbar-gutter: stable;
+  }
   body {
-    background-color: rgb(252, 248, 241);
+    background-color: rgb(212, 201, 174);
   }
 
   main {
     margin: 0;
     width: 100%;
     padding: 0;
+    min-height: 96vh;
   }
 
   main p {
@@ -423,6 +496,14 @@ padding-top: 0;
     color: black;
   }
 
+  /* Top-of-page image and header text */
+  #container {
+    overflow: hidden;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+
+  /*////////////////////////////Homepage////////////////////////////*/
   .home {
     padding-top: 0;
     padding-bottom: 0;
@@ -430,6 +511,7 @@ padding-top: 0;
     width: 100%;
   }  
 
+  /*////////////////////////////Form////////////////////////////*/
   .form {
     padding-top: 0;
     padding-bottom: 0;
@@ -446,18 +528,11 @@ padding-top: 0;
 
   form {
     width: 94vw;
-    background-color: rgb(252, 248, 241); /*Keep this same as 'body' above*/
+    background-color: rgb(212, 201, 174); /*Keep this same as 'body' above*/
     width: 94vw;
     padding-top: 1.5vh;
     margin: 0;
   }
-
-  .venue {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: 0;
-    width: 100%;
-  }  
 
   .form-submission-error {
     padding-top: 0;
@@ -471,21 +546,31 @@ padding-top: 0;
     padding-bottom: 0;
     margin-top: 0;
     width: 100%;
+  }
+
+  /*////////////////////////////Venue////////////////////////////*/
+  .venue {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    width: 100%;
   }  
 
-  /* Top-of-page image and header text */
-  #container {
-    overflow: hidden;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+  /*////////////////////////////FAQ////////////////////////////*/
+  .faq {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    width: 100%;
   }
 
   /*////////////////////////////Page Content////////////////////////////*/
   .page-content {
-    background-color: rgb(252, 248, 241); /*Keep this same as 'body' above*/
-    width: 94vw;
+    background-color: rgb(212, 201, 174); /*Keep this same as 'body' above*/
+    width: 100vw;
     padding-top: 1.5vh;
     margin: 0;
+    border-radius: 0;
   }
 
   .page-content h1 {
@@ -494,6 +579,7 @@ padding-top: 0;
     margin: 0;
   }
 
+  /*////////////////////////////Nav////////////////////////////*/
   .hamburger {
     position: absolute;
     top: 8.3vh;
@@ -519,7 +605,7 @@ padding-top: 0;
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: var(--secondary);
     top: 100%; left: 0; right: 0; bottom: 0;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
@@ -555,7 +641,7 @@ padding-top: 0;
     text-decoration: none;
     width: 40vw;
     color: var(--primary);
-    background-color: rgb(146, 148, 105);
+    background-color: var(--sage-green);
     border-radius: 4px;
     font-size: 2em;
     display: inline-block;
@@ -569,16 +655,23 @@ padding-top: 0;
     height: 0;
     position: absolute;
     width: 0.25em;
-    background-color: red;
     left: -0.5em;
     transition: all 0.2s ease-in-out;
   }
 
   header nav a.active {
   border-bottom: none;
-}
+  }
 
-  /* animations */
+  footer {
+    height: 4vh;
+    margin: 0;
+    padding: 0;
+    height: 4vh; /* keep these two the same in order to keep the text centered within the nav button */
+    line-height: 4vh;
+  }
+
+  /*////////////////////////////Animations////////////////////////////*/
   #toggle:checked + .hamburger .top-slice {
     transform: rotate(-45deg);
     margin-top: 25px;

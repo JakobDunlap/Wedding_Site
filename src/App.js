@@ -10,6 +10,7 @@ import FormSubmitted from './pages/FormSubmitted';
 import FormSubmissionError from './pages/FormSubmissionError';
 import Gallery from './pages/Gallery';
 import Venue from './pages/Venue';
+import FAQ from './pages/FAQ';
 import NotFound from './pages/NotFound';
 
 // layouts //
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       <Route path="form-submission-error" element={<FormSubmissionError />} />
       <Route path="gallery" element={<Gallery />} />
       <Route path="venue" element={<Venue />} />
+      <Route path="faq" element={<FAQ />} />
 
       <Route path="*" element={<NotFound/>} />
     </Route>

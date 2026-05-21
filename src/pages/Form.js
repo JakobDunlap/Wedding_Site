@@ -101,7 +101,7 @@ export default function Form() {
                     <input type ="email" name="email" autoComplete="email" required/>
                 </label>
                 <label>
-                    <span className="additional-form-info">If you plan on bringing a plug-one, a friend, or your children with you, please add their names below. Otherwise, simply leave this space blank.</span>
+                    <span className="additional-form-info">If you plan on bringing a plus-one, a friend, or your children with you, please add their names below. Otherwise, simply leave this space blank.</span>
                     <span className="additional-form-info">If you plan on bringing more than four additional guests with you, please email Jake at 'jakob_dunlap@outlook.com'.</span>
                     {guests.map((_, index) => (
                         <div key={index} className="form-input-cell">

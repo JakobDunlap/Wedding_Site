@@ -2,7 +2,7 @@ import { NavLink, Outlet, useNavigate } from "react-router-dom"
 
 export default function RootLayout() {
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   // const location = useLocation();
 
@@ -31,7 +31,7 @@ export default function RootLayout() {
           <div className="bottom-slice"></div>
         </label>
 
-        <nav className="navigation">
+        <nav className="navigation josifin-slab">
           <div className="navigation-link">
             <NavLink to="/" onClick={navClick}>Home</NavLink>
           </div>
@@ -44,6 +44,9 @@ export default function RootLayout() {
           <div className="navigation-link">
             <NavLink to="venue" onClick={navClick}>Venue</NavLink>
           </div>
+          <div className="navigation-link">
+            <NavLink to="faq" onClick={navClick}>FAQ</NavLink>
+          </div>
         </nav>
 
       </header>
@@ -52,7 +55,7 @@ export default function RootLayout() {
           <Outlet />
       </main>
 
-      <footer>
+      <footer className="josifin-slab">
         <p>Copyright 2026 Jakob Dunlap</p>
         <p>Photography by Delaney Hady</p>
       </footer>

@@ -1,4 +1,6 @@
 import { NavLink } from 'react-router-dom';
+const phone = process.env.PHONE_NUMBER;
+const email = process.env.EMAIL;
 
 export default function FormSubmitted() {
 
@@ -17,8 +19,8 @@ export default function FormSubmitted() {
 
             <div className="page-content">
                 <h1>Thank you for submitting your RSVP form!</h1>
-
-                <p className="form-submitted-para">Feel free to return the the <NavLink to="/" >home page</NavLink></p>
+                <p>If you need to make any update to your RSVP, please contact Jake directly at</p>{phone}<p> or </p>{email}
+                <p className="form-submitted-para">Please feel free to return to the the <NavLink to="/" >home page</NavLink></p>
             </div>
 
         </div>
