@@ -5,14 +5,27 @@ export default function Home() {
 
             <div id="container">
                 <img src={ require(`../home.jpg`) } alt="background" draggable="false" className="background-image"/>
-                <h1 className="monsieur-la-doulaise-regular" id="title-banner"><NavLink to="/">Julia &    Jake</NavLink></h1>
-                <p>09 | 19 | 2026</p>
+                <h1 className="sacramento-regular" id="title-banner"><NavLink to="/">Julia &    Jake</NavLink></h1>
+                <p className="josifin-slab-bold">09 | 19 | 2026</p>
             </div>
 
             <div className="page-content">
-                <h1>This is a heading for the wedding home page</h1>
-                <p>Jakob Dunlap and Julia Pfromm met three years ago on Bumble and it didn't take long for us to understand how right for each other we were. Along the way we've taken lots of trips, shared many laughs, adopted a loveably stubborn dog, and held each other up throught the many challenges life presents to us. </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa aspernatur, nulla nam illo labore consequatur officia sapiente voluptatum quibusdam adipisci aperiam molestiae doloribus aut quis ducimus, odio hic eos quasi doloremque exercitationem sunt similique qui expedita. Mollitia vitae qui illo. Soluta ipsum explicabo non voluptates fugiat rerum quibusdam vero excepturi! Illum repudiandae accusantium ad inventore suscipit sed commodi dolorum velit corrupti facere, similique nulla perferendis et eius vero quibusdam reiciendis. Repellendus quasi totam doloremque labore blanditiis consectetur eum voluptatem dignissimos eaque nostrum praesentium, delectus animi atque, est magnam sapiente error necessitatibus dolore placeat ipsam corrupti dolores? Architecto quam earum labore.</p>
+                <h1 className="josifin-slab">A Very Special Day</h1>
+                <p className="josifin-slab">Jakob Dunlap and Julia Pfromm met three years ago on Bumble and it didn't take long for them to understand how right for each other they were. Along the way they've taken lots of trips, shared many laughs, adopted a loveably stubborn hound dog, and held each other up throughout the many challenges life presents.</p>
+                <p className="josifin-slab">Julia and Jake would like to invite you to join them for a very special celebration of their love and witness the beginning of their life together. Please see below the itinerary for the day.</p>
+                <br></br>
+                <h2 className="josifin-slab">Ceremony</h2>
+                <p className="josifin-slab">3:00pm - 4:00pm</p>
+                <p className="josifin-slab">The wedding ceremony will be held in the back yard of Jakob's grandmother's house - see details on the Venue page.</p>
+                <br></br>
+                <h2 className="josifin-slab">Cocktail Hour</h2>
+                <p className="josifin-slab">4:00pm - 5:00pm</p>
+                <p className="josifin-slab">The cocktail hour will be held at the adjacent 3-car garage.</p>
+                <br></br>
+                <h2 className="josifin-slab">Reception</h2>
+                <p className="josifin-slab">5:00pm - 10:00pm</p>
+                <p className="josifin-slab">The wedding reception will be held just down the road to the west, at a separate building on the property. Details on the Venue page.</p>
+                <p className="josifin-slab">Dinner will be served at 5:45pm</p>
             </div>
             
         </div>

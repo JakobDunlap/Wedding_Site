@@ -12,7 +12,7 @@ export default function FAQ() {
             <div id="container">
                 <img src={ require(`../faq.jpg`) } alt="background" draggable="false" className="background-image"/>
                 <h1 className="sacramento-regular" id="title-banner"><NavLink to="/" onClick={navClick}>Julia &    Jake</NavLink></h1>
-                <p>09 | 19 | 2026</p>
+                <p className="josifin-slab-bold">09 | 19 | 2026</p>
             </div>
 
              <div className="page-content josifin-slab">
@@ -41,6 +41,10 @@ export default function FAQ() {
                 <div className="faq-question">
                     <h2>Will there be an open bar?</h2>
                     <p>You betcha! We'll have plenty of beer, wine, and assorted libations. If you have a favorite obscure beer you can't live without- feel free to bring it with you!</p>
+                </div>
+                <div className="faq-question">
+                    <h2>Is this an 'unplugged' wedding?</h2>
+                    <p>Not exactly, but cell reception is quite sparse at the ceremony and reception locations, so please plan accordingly. Jakob's grandma's house is in a bit of a valley, but cell reception is perfectly serviceable just a quarter mile or so up the road, east or west of the property - so in an emergency, cell reception is not far away.</p>
                 </div>
                 
             </div>

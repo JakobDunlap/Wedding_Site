@@ -134,7 +134,7 @@ header nav a.active {
 } */
 /* Above lines are boilerplate from 'create react app' */
 
-/* fonts */
+/*////////////////////////////Fonts////////////////////////////*/
 .monsieur-la-doulaise-regular {
   font-family: "Monsieur La Doulaise", serif;
   font-weight: 400;
@@ -166,7 +166,7 @@ header nav a.active {
 
 .josifin-slab-bold {
   font-family: "Josefin Slab", serif;
-  font-weight:bold;
+  font-weight: bold;
   font-size: 20pt;
 }
 
@@ -188,7 +188,6 @@ header nav a.active {
   color: var(--secondary);
   font-size: 1.5em;
   text-align: center;
-  font-weight: lighter;
 }
 
 #container img {
@@ -306,16 +305,50 @@ form button {
 /*////////////////////////////Gallery////////////////////////////*/
 .gallery {
   padding-top: 0;
-  padding-bottom: 2vh;
-  display: flex;
+  display:block;
   margin: auto;
+  width: 100%;
   justify-content: center;
+  justify-items: center;
+  text-align: center;
   overflow: hidden;
+  z-index: 1;
 }
 
 .gallery p {
   font-size: 14pt;
   margin: 0px;
+}
+
+.gallery-page-content {
+  width: 90vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  background-color: rgb(212, 201, 174);
+  color: black;
+  border-radius: 7px;
+}
+
+.gallery-page-content h1 {
+  padding-bottom: 2.5vh;
+  padding-top: 2.5vh;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  margin: 0;
+  margin-bottom: 2vh;
+  border-bottom: 4px solid rgb(188, 177, 155);
+  color: rgb(48, 68, 48);
+}
+
+.gallery-page-content p {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.gallery-image {
+  max-width: 80vw;
 }
 
 /*////////////////////////////Venue////////////////////////////*/
@@ -412,15 +445,19 @@ padding-top: 0;
 .page-content h1 {
   padding-bottom: 2.5vh;
   padding-top: 2.5vh;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
   margin: 0;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
   border-bottom: 4px solid rgb(188, 177, 155);
   color: rgb(48, 68, 48);
 }
 
 .page-content p {
-  padding-top: 1.5vh;
-  padding-bottom: 1.5vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 
 /* button experiement */

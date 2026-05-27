@@ -75,8 +75,8 @@ export default function Form() {
 
             <div id="container">
                 <img src={ require(`../form.jpg`) } alt="background" draggable="false" className="background-image"/>
-                <h1 className="monsieur-la-doulaise-regular" id="title-banner"><NavLink to="/" onClick={navClick}>Julia &    Jake</NavLink></h1>
-                <p>09 | 19 | 2026</p>
+                <h1 className="sacramento-regular" id="title-banner"><NavLink to="/" onClick={navClick}>Julia &    Jake</NavLink></h1>
+                <p className="josifin-slab-bold">09 | 19 | 2026</p>
             </div>
 
             <form action="/form" method="post" onSubmit={handleSubmit}>
