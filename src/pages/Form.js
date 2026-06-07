@@ -34,7 +34,7 @@ export default function Form() {
             }
         }
         try {
-            const response = await fetch("https://jake-and-julia-wedding-server.onrender.com/form", { //Local Development Server:"http://localhost:5000/form" Live App Server:"https://wedding-site-server-test.onrender.com/form" New Server: "https://jake-and-julia-wedding-server.onrender.com/form"
+            const response = await fetch("http://localhost:5000/form", { //Local Development Server:"http://localhost:5000/form" Live App Server:"https://wedding-site-server-test.onrender.com/form" New Server: "https://jake-and-julia-wedding-server.onrender.com/form"
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -74,52 +74,52 @@ export default function Form() {
         <div className="form">
 
             <div id="container">
-                <img src={ require(`../form.jpg`) } alt="background" draggable="false" className="background-image"/>
-                <h1 className="sacramento-regular" id="title-banner"><NavLink to="/" onClick={navClick}>Julia &    Jake</NavLink></h1>
+                <img src={ require(`../photos/form.jpg`) } alt="background" draggable="false" className="background-image"/>
+                <h1 className="sacramento-regular" id="title-banner"><NavLink to="/" onClick={navClick}>Julia & Jake</NavLink></h1>
                 <p className="josifin-slab-bold">09 | 19 | 2026</p>
             </div>
 
             <form action="/form" method="post" onSubmit={handleSubmit}>
-                <p className="form-header">Please fill out the form below to let us know if you'll be joining us</p>
+                <p className="form-header josifin-slab">Please fill out the form below to let us know if you'll be joining us</p>
                 <label className="form-input-cell">
-                    <span>Your Full Name</span>
+                    <span className="josifin-slab">Your Full Name</span>
                     <input type="text" name="guest-name" autoComplete="name" required />
                 </label>
                 <label className="form-input-cell">
-                    <span>Will you be attending?</span>
+                    <span className="josifin-slab">Will you be attending?</span>
                     <div className="button-wrap">
                         <div className="yes-button-wrapper">
-                            <input className="button-label" type="radio" name="attending" value="true" id="yes-button" /><label htmlFor="yes-button"><p id="yes-button-label">Yes</p></label>
+                            <input className="button-label" type="radio" name="attending" value="true" id="yes-button" /><label htmlFor="yes-button"><p id="yes-button-label" className="josifin-slab">Yes</p></label>
                         </div>
                         <div className="no-button-wrapper">
-                            <input className="button-label" type="radio" name="attending" value="false" id="no-button"/><label htmlFor="no-button"><p id="no-button-label">No</p></label>
+                            <input className="button-label" type="radio" name="attending" value="false" id="no-button"/><label htmlFor="no-button"><p id="no-button-label" className="josifin-slab">No</p></label>
                         </div>
                     </div>
                 </label>
                 <label className="form-input-cell">
-                    <span>Your Email</span>
+                    <span className="josifin-slab">Your Email</span>
                     <input type ="email" name="email" autoComplete="email" required/>
                 </label>
                 <label>
-                    <span className="additional-form-info">If you plan on bringing a plus-one, a friend, or your children with you, please add their names below. Otherwise, simply leave this space blank.</span>
-                    <span className="additional-form-info">If you plan on bringing more than four additional guests with you, please email Jake at 'jakob_dunlap@outlook.com'.</span>
+                    <span className="additional-form-info josifin-slab">If you plan on bringing a plus-one, a friend, or your children with you, please add their names below. Otherwise, simply leave this space blank.</span>
+                    <span className="additional-form-info josifin-slab">If you plan on bringing more than four additional guests with you, please email Jake at 'jakob_dunlap@outlook.com'.</span>
                     {guests.map((_, index) => (
                         <div key={index} className="form-input-cell">
-                            <span>Additional Guest Full Name</span>
-                            <input name="additionalGuestName[]" type="name"/>
+                            <span className="josifin-slab">Additional Guest Full Name</span>
+                            <input name="additionalGuestName[]" type="name" id="additional-guest-input" autoComplete="name"/>
                         </div>
                     ))}
-                    <button type="button" onClick={addGuest} disabled={guests.length >= maxGuests}>
+                    <button type="button" id="add-guest-button" onClick={addGuest} disabled={guests.length >= maxGuests} className="josifin-slab">
                         {guests.length >= maxGuests
                         ? "Maximum number of guests reached for this form"
                         : "Add another guest"}
                     </button>
                 </label>
                 <label className="form-input-cell">
-                    <span className="additional-form-info">If you or any of the additional guests you will be bringing have any dietary restrictions, please note them below.</span>
+                    <span className="additional-form-info josifin-slab">If you or any of the additional guests you will be bringing have any dietary restrictions, please note them below.</span>
                     <input type="text" name="dietary"/>
                 </label>
-                <button type="submit" disabled={isSubmitting} >
+                <button type="submit" id="submit-button" disabled={isSubmitting} className="josifin-slab-bold">
                     {isSubmitting ? "Submitting..." : "Submit"}
                 </button>
             </form>

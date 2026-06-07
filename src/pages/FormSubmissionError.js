@@ -12,8 +12,8 @@ export default function FormSubmissionError() {
         <div className="form-submission-error">
 
             <div id="container">
-                <img src={ require(`../form-submission-error.jpg`) } alt="background" draggable="false" className="background-image"/>
-                <h1 className="monsieur-la-doulaise-regular" id="title-banner"><NavLink to="/" onClick={navClick}>Julia &    Jake</NavLink></h1>
+                <img src={ require(`../photos/form-submission-error.jpg`) } alt="background" draggable="false" className="background-image"/>
+                <h1 className="monsieur-la-doulaise-regular" id="title-banner"><NavLink to="/" onClick={navClick}>Julia & Jake</NavLink></h1>
                 <p className="josifin-slab-bold">09 | 19 | 2026</p>
             </div>
 

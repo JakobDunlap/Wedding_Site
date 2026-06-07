@@ -266,10 +266,10 @@ form input, form label span, form textarea {
 }
 
 form input, form textarea {
-  margin-bottom: 30px;
+  margin-bottom: 300px;
   padding: 8px;
   border-radius: 4px;
-  border: 3px solid rgb(208, 205, 154); /* Line around the from input areas */
+  border: 3px solid rgb(117, 117, 117); /* Line around the from input areas */
   width: 300px;
   margin: 10px auto;
   color: black;
@@ -281,6 +281,11 @@ form input, form textarea {
 
 form label span {
   margin-bottom: 10px;
+}
+
+form input {
+  width: 60%;
+  margin-bottom: 6vh;
 }
 
 form button {
@@ -295,6 +300,58 @@ form button {
 .additional-form-info {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+#add-guest-button {
+  margin-bottom: 6vh;
+}
+
+#additional-guest-input {
+  margin-bottom: 1vh;
+}
+
+.button-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6vh;
+}
+
+.yes-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+}
+
+#yes-button {
+  width: 1.5vw;
+  min-width: 15px;
+  max-width: 30px;
+  margin: 9px;
+}
+
+.no-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+}
+
+#no-button {
+  width: 1.5vw;
+  min-width: 15px;
+  max-width: 30px;
+  margin: 9px;
+}
+
+#submit-button {
+  padding: 10px;
+  background-color: rgb(200, 225, 189);
+}
+
+.button-label {
+  width: 5vw;
+  min-width: 10px;
 }
 
 /* For "return to home page" link - on /form-submitted and /form-submission-error */
@@ -368,6 +425,12 @@ form button {
 .venue p {
   font-size: 14pt;
   margin: 0px;
+}
+
+.venue-map {
+  width: 90%;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 /*////////////////////////////FAQ////////////////////////////*/
@@ -461,43 +524,7 @@ padding-top: 0;
 }
 
 /* button experiement */
-.button-wrap {
-  display: flex;
-  justify-content: center;
-}
 
-.yes-button-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-left: 1.5vw;
-  margin-right: 1.5vw;
-}
-
-#yes-button {
-  width: 1.5vw;
-  min-width: 15px;
-  max-width: 30px;
-  margin: 9px;
-}
-
-.no-button-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-left: 1.5vw;
-  margin-right: 1.5vw;
-}
-
-#no-button {
-  width: 1.5vw;
-  min-width: 15px;
-  max-width: 30px;
-  margin: 9px;
-}
-
-.button-label {
-  width: 5vw;
-  min-width: 10px;
-}
 
 
 /* MEDIUM VIEW WIDTH */
@@ -569,6 +596,19 @@ padding-top: 0;
     width: 94vw;
     padding-top: 1.5vh;
     margin: 0;
+  }
+
+  form input {
+    width: 60%;
+    margin-bottom: 3.5vh;
+  }
+
+  .button-wrap {
+    margin-bottom: 3.5vh;
+  }
+
+  #add-guest-button {
+    margin-bottom: 3.5vh;
   }
 
   .form-submission-error {

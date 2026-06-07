@@ -10,8 +10,8 @@ export default function Gallery() {
         <div className="gallery">
             
             <div id="container">
-                <img src={ require(`../dog.jpg`) } alt="background" draggable="false" className="background-image"/>
-                <h1 className="sacramento-regular" id="title-banner"><NavLink to="/" onClick={navClick}>Julia &    Jake</NavLink></h1>
+                <img src={ require(`../photos/dog.jpg`) } alt="background" draggable="false" className="background-image"/>
+                <h1 className="sacramento-regular" id="title-banner"><NavLink to="/" onClick={navClick}>Julia & Jake</NavLink></h1>
                 <p className="josifin-slab-bold">09 | 19 | 2026</p>
             </div>
 
@@ -47,9 +47,6 @@ export default function Gallery() {
                 </div>
                 <div className="gallery-grid">
                     <img src={ require(`../gallery-photos/bench.jpg`) } alt="background" draggable="false" className="gallery-image"/>
-                </div>
-                <div className="gallery-grid">
-                    <img src={ require(`../gallery-photos/sunset.jpg`) } alt="background" draggable="false" className="gallery-image"/>
                 </div>
                 <div className="gallery-grid">
                     <img src={ require(`../gallery-photos/walking.jpg`) } alt="background" draggable="false" className="gallery-image"/>
