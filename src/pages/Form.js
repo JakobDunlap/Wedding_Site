@@ -34,7 +34,7 @@ export default function Form() {
             }
         }
         try {
-            const response = await fetch("http://localhost:5000/form", { //Local Development Server:"http://localhost:5000/form" Live App Server:"https://wedding-site-server-test.onrender.com/form" New Server: "https://jake-and-julia-wedding-server.onrender.com/form"
+            const response = await fetch("https://jake-and-julia-wedding-server.onrender.com/form", { //Local Development Server:"http://localhost:5000/form" Live App Server:"https://wedding-site-server-test.onrender.com/form" New Server: "https://jake-and-julia-wedding-server.onrender.com/form"
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
