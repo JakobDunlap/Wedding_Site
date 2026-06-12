@@ -5,7 +5,7 @@ export default function Home() {
 
             <div id="container">
                 <img src={ require(`../photos/home.jpg`) } alt="background" draggable="false" className="background-image"/>
-                <h1 className="sacramento-regular" id="title-banner"><NavLink to="/">Julia & Jake</NavLink></h1>
+                <h1 className="cursive" id="title-banner"><NavLink to="/">Julia & Jake</NavLink></h1>
                 <p className="josifin-slab-bold">09 | 19 | 2026</p>
             </div>
 

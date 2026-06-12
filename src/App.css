@@ -135,25 +135,18 @@ header nav a.active {
 /* Above lines are boilerplate from 'create react app' */
 
 /*////////////////////////////Fonts////////////////////////////*/
-.monsieur-la-doulaise-regular {
-  font-family: "Monsieur La Doulaise", serif;
-  font-weight: 400;
-  font-style: normal;
-  white-space: pre;
+@font-face {
+  font-family: "Grandmas Recipe";
+  src: local('VSGrandmasRecipeRegular'), url(./VSGrandmasRecipeRegular.woff2) format('woff2');
 }
 
-.monsieur-la-doulaise-regular a {
-  text-decoration: none;
-  color: var(--secondary);
-}
-
-.sacramento-regular {
-  font-family: "Sacramento", serif;
+.cursive {
+  font-family: "Grandmas Recipe", "Sacramento", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.sacramento-regular a {
+.cursive a {
   text-decoration: none;
   color: var(--secondary);
 }
@@ -406,6 +399,7 @@ form button {
 
 .gallery-image {
   max-width: 80vw;
+  max-height: 90vh;
 }
 
 /*////////////////////////////Venue////////////////////////////*/
@@ -523,19 +517,6 @@ padding-top: 0;
   padding-right: 2vw;
 }
 
-/* button experiement */
-
-
-
-/* MEDIUM VIEW WIDTH */
-@media (max-width: 870px) {
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: blue;
-  }
-}
-
 /* MOBILE VIEW WIDTH */
 @media (max-width: 600px) {
   html {
@@ -565,6 +546,14 @@ padding-top: 0;
     overflow: hidden;
     padding-top: 10vh;
     padding-bottom: 10vh;
+  }
+
+  #container p {
+    font-size: 1.4em;
+  }
+
+  .cursive a {
+    font-size: 2em;
   }
 
   /*////////////////////////////Homepage////////////////////////////*/
@@ -741,10 +730,11 @@ padding-top: 0;
   }
 
   footer {
+    font-size: 0.9em;
     height: 4vh;
     margin: 0;
     padding: 0;
-    height: 4vh; /* keep these two the same in order to keep the text centered within the nav button */
+    height: 4vh;
     line-height: 4vh;
   }
 
