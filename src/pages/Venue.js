@@ -18,9 +18,9 @@ export default function Venue() {
              <div className="page-content">
                 <h1 className="josifin-slab">The Venue</h1>
                 <h2 className="josifin-slab">16140 Hollingsworth Rd, Basehor, KS 66007</h2>
-                <p className="josifin-slab">Julia Pfromm and Jakob Dunlap will be wed at Jakob's grandmother's home. This brick, two-story mansard-roof house was built by Jakob's grandfather Art Otterman in 1979. An adjacent three car detatched garage will hold a cocktail hour following the ceremony. The reception will be held at a separate, small cinder block warehouse just 400 feet down the road to the West of the house. Art ran his bricklaying business out of this warehouse in the 1960's and 70's, during which time he built many churches and community centers still in use in the Kansas City, KS area to this day. Unfortunately, Art passed away from cancer in 1981, but we honor his legacy by celebrating this very special day at the beautiful home he worked so hard to build.</p>
+                <p className="josifin-slab">Julia Pfromm and Jakob Dunlap will be wed at Jakob's grandmother's home. This brick, two-story mansard-roof house was built by Jakob's grandfather Art Otterman in 1979. An adjacent three-car detatched garage will hold a cocktail hour following the ceremony. The reception will be held at a separate, small cinder block warehouse just 400 feet down the road to the West of the house. Art ran his bricklaying business out of this warehouse in the 1960's and 70's, during which time he built many churches and community centers still in use in the Kansas City, KS area to this day. Unfortunately, Art passed away from cancer in 1981, but we honor his legacy by celebrating this very special day at the beautiful home he worked so hard to build.</p>
                 <img src={ require(`../photos/map.png`) } alt="venue map" draggable="false" className="venue-map"/>
-                <p className="josifin-slab">Following the cocktail hour, a golf car will be available to help transport those guests to the reception area that cannot make the walk.</p>
+                <p className="josifin-slab">Following the cocktail hour, a golf cart will be available to help transport those guests who need assistance to the reception area.</p>
             </div>
             
         </div>

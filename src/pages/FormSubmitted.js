@@ -20,10 +20,8 @@ export default function FormSubmitted() {
             <div className="page-content">
                 <h1 className="josifin-slab">Thank you for submitting your RSVP form!</h1>
                 <p className="josifin-slab">If you need to make any update to your RSVP, please contact Jake directly at</p>
-                {phone}
-                <p className="josifin-slab"> or </p>
-                {email}
-                <p className="form-submitted-para josifin-slab">Please feel free to return to the the <NavLink to="/" >home page</NavLink></p>
+                <p className="josifin-slab"> jakob_dunlap@outlook.com </p>
+                <p className="form-submitted-para josifin-slab">Feel free to return to the the <NavLink to="/" >home page</NavLink></p>
             </div>
 
         </div>

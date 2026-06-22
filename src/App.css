@@ -349,7 +349,7 @@ form button {
 
 /* For "return to home page" link - on /form-submitted and /form-submission-error */
 .form-submitted-para a {
-  color: rgb(146, 148, 105);
+  color: var(--julia-blue);
 }
 
 /*////////////////////////////Gallery////////////////////////////*/
